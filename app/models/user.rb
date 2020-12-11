@@ -103,7 +103,6 @@ class User < Sequel::Model
   end
 
   def self_feature_flags_user
-    raise "Force CI to run"
     Carto::FeatureFlagsUser.where(user_id: id)
   end
 
